@@ -5,6 +5,7 @@
 아래와 같이 명령어를 실행하시면 됩니다.
 
 ```bash
+$ cd n01_multi_turn_chat
 $ python main.py
 ```
 

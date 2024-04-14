@@ -1,3 +1,5 @@
+import sys
+sys.path.append("../")
 import gradio as gr
 from llama_index.core.base.llms.types import ChatMessage
 from pprint import pprint
@@ -32,4 +34,6 @@ with gr.Blocks() as demo:
             gr.ChatInterface(respond, additional_inputs=[llm_options])
         with gr.Column():
             gr.Markdown(README_STR)
-demo.launch()
+
+if __name__ == "__main__":
+    demo.queue().launch()

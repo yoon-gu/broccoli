@@ -12,7 +12,6 @@ gemini_apikey = os.environ("GEMINI_API_KEY")
 llm_gemini = Gemini(api_key=gemini_apikey)
 
 friendli_apikey = os.environ("FRIENDLI_API_KEY")
-
 llm_friendli = Friendli(friendli_token=friendli_apikey)
 
 llms_dict = {
