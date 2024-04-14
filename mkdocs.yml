@@ -16,7 +16,8 @@ nav:
       - ./examples/query_engine/pandas_query_engine.ipynb
       - ./examples/query_engine/RouterQueryEngine.ipynb
 plugins:
-  - mkdocs-jupyter
+  - mkdocs-jupyter:
+      execute: false
   - include_dir_to_nav
   - search
 theme: mkdocs
