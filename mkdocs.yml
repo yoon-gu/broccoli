@@ -1,1 +1,22 @@
-site_name: My Docs
+site_name: Broccoli
+site_url: https://broccoli.io/
+nav:
+  - Home: index.md
+  - About: about.md
+  - Examples:
+    - ./examples/index.md
+    - Agents:
+      - ./examples/agent/react_agent.ipynb
+      - ./examples/agent/react_agent_with_query_engine.ipynb
+    - Pipelines:
+      - ./examples/pipeline/query_pipeline.ipynb
+      - ./examples/pipeline/query_pipeline_pandas.ipynb
+      - ./examples/pipeline/query_pipeline_routing.ipynb
+    - Query Engines:
+      - ./examples/query_engine/pandas_query_engine.ipynb
+      - ./examples/query_engine/RouterQueryEngine.ipynb
+plugins:
+  - mkdocs-jupyter
+  - include_dir_to_nav
+  - search
+theme: mkdocs
