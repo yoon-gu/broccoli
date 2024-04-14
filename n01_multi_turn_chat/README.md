@@ -1,5 +1,44 @@
 # Multi-turn Chatbot
 
+## 실행 방법
+
+아래와 같이 명령어를 실행하시면 됩니다.
+
+```bash
+$ python main.py
+```
+
+## LLM들 로드하는 방법
+
+```python
+import os
+from llama_index.llms.cohere import Cohere
+from llama_index.llms.gemini import Gemini
+from llama_index.llms.friendli import Friendli
+
+cohere_apikey = os.environ("COHERE_API_KEY")
+llm_cohere_cmd_r_plus = Cohere(api_key=cohere_apikey, model="command-r-plus")
+llm_cohere_cmd_r = Cohere(api_key=cohere_apikey, model="command-r")
+llm_cohere_cmd = Cohere(api_key=cohere_apikey, model="command")
+
+gemini_apikey = os.environ("GEMINI_API_KEY")
+llm_gemini = Gemini(api_key=gemini_apikey)
+
+friendli_apikey = os.environ("FRIENDLI_API_KEY")
+
+llm_friendli = Friendli(friendli_token=friendli_apikey)
+
+llms_dict = {
+                "cohere-command-r-plus": llm_cohere_cmd_r_plus,
+                "cohere-command-r": llm_cohere_cmd_r,
+                "cohere-command": llm_cohere_cmd,
+                "gemini-pro": llm_gemini,
+                "friendli-gemma-7B-instruct": llm_friendli
+            }
+```
+
+## 기타 내용
+
 ```
 이 밑에 있는 내용은 ChatGPT를 이용한 답변이므로 기능과 관련이 없을 수 있습니다.
 ```
@@ -17,38 +56,3 @@
 
 **예상 결과**:
 챗봇은 이전의 대화 내용, 즉 오늘의 날씨에 대한 질문을 기억하고, 내일의 날씨 정보를 제공할 수 있어야 합니다.
-
-### 예제 2: 복합 질문에 대한 답변 능력 테스트
-
-**목적**: 챗봇이 여러 정보를 요구하는 복합적인 질문에 효과적으로 대응할 수 있는지 평가합니다.
-
-**과정**:
-1. 사용자가 "내일 런던에서 열리는 이벤트와 그 날의 날씨를 알려줘"라고 요청합니다.
-2. 챗봇은 내일 런던의 날씨와 런던에서 열리는 이벤트 정보를 함께 제공해야 합니다.
-
-**예상 결과**:
-챗봇은 날씨 정보와 이벤트 정보를 동시에 처리하고 관련 정보를 일관되게 제공할 수 있어야 합니다.
-
-### 예제 3: 사용자의 비평형 질문에 대한 대응
-
-**목적**: 챗봇이 감정적이거나 비평적인 질문에 어떻게 반응하는지 확인합니다.
-
-**과정**:
-1. 사용자가 "왜 매번 내가 물어볼 때마다 날씨만 말해?"라고 비평합니다.
-2. 챗봇은 질문의 감정적 측면을 이해하고, 사과하거나 설명하는 등의 방식으로 반응합니다.
-
-**예상 결과**:
-챗봇은 사용자의 감정을 감지하고 적절하게 대응하여 문제를 해결하려고 시도해야 합니다.
-
-### 예제 4: 지속적인 대화 유지 능력 테스트
-
-**목적**: 챗봇이 긴 대화에서 주제를 유지하며 적절히 대응할 수 있는지 검사합니다.
-
-**과정**:
-1. 사용자가 여러 차례에 걸쳐 다양한 주제에 대해 질문합니다.
-2. 챗봇은 각 질문에 대해 일관성 있게 정보를 제공하고 주제에 맞는 답변을 해야 합니다.
-
-**예상 결과**:
-챗봇은 대화의 흐름을 유지하면서 각 주제에 대해 일관된 답변을 제공할 수 있어야 합니다.
-
-이러한 예제들은 멀티턴 챗봇의 다양한 기능을 테스트하고 성능을 평가
