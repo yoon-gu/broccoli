@@ -1,4 +1,4 @@
-# Multi-turn Chatbot
+# ReAct Chatbot
 
 ## 실행 방법
 
