@@ -12,5 +12,4 @@ jobs:
         with:
           python-version: 3.11
       - run: pip install mkdocs mkdocs-jupyter mkdocs-include-dir-to-nav
-      - run: git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
       - run: mkdocs gh-deploy --force --clean --verbose
