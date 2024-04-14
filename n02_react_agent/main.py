@@ -1,5 +1,6 @@
 import functools
 import sys
+sys.path.append("../")
 from io import StringIO
 from typing import Any, Dict, List, Optional, Tuple
 import os
@@ -8,6 +9,12 @@ from llama_index.core.llama_pack.base import BaseLlamaPack
 from llama_index.llms.cohere import Cohere
 from llama_index.tools.arxiv import ArxivToolSpec
 from llama_index.tools.wikipedia import WikipediaToolSpec
+from llms import llms_dict
+
+current_file_path = os.path.abspath(__file__)
+current_dir = os.path.dirname(current_file_path)
+with open(os.path.join(current_dir, "README.md"), 'r', encoding='utf-8') as file:
+    README_STR = file.read()
 
 SUPPORTED_TOOLS = {
     "arxiv_search_tool": ArxivToolSpec,
@@ -54,9 +61,7 @@ class GradioReActAgentPack(BaseLlamaPack):
                 raise KeyError(f"Tool {t} is not supported.")
         self.tools = tools
 
-        cohere_apikey = os.environ["COHERE_API_KEY"]
-        llm_cohere_cmd_r_plus = Cohere(api_key=cohere_apikey, model="command-r-plus")
-        self.llm = llm_cohere_cmd_r_plus
+        self.llm = llms_dict["cohere-command-r-plus"]
         self.agent = ReActAgent.from_tools(
             tools=functools.reduce(
                 lambda x, y: x.to_tool_list() + y.to_tool_list(), self.tools
@@ -98,47 +103,36 @@ class GradioReActAgentPack(BaseLlamaPack):
         self.agent.reset()
         return "", "", ""  # clear textboxes
 
-    def run(self, *args: Any, **kwargs: Any) -> Any:
-        """Run the pipeline."""
-        import gradio as gr
 
-        demo = gr.Blocks(
-            theme="gstaff/xkcd",
-            css="#box { height: 420px; overflow-y: scroll !important}",
-        )
-        with demo:
-            gr.Markdown(
-                "# Gradio ReActAgent Powered by LlamaIndex and LlamaHub 🦙\n"
-                "This Gradio app is powered by LlamaIndex's `ReActAgent` with\n"
-                "OpenAI's GPT-4-Turbo as the LLM. The tools are listed below.\n"
-                "## Tools\n"
-                "- [ArxivToolSpec](https://llamahub.ai/l/tools-arxiv)\n"
-                "- [WikipediaToolSpec](https://llamahub.ai/l/tools-wikipedia)"
+runner = GradioReActAgentPack(run_from_main=True)
+
+import gradio as gr
+
+with gr.Blocks() as demo:
+    with gr.Row():
+        with gr.Column():
+            chat_window = gr.Chatbot(
+                label="Message History",
             )
-            with gr.Row():
-                chat_window = gr.Chatbot(
-                    label="Message History",
-                    scale=3,
-                )
-                console = gr.HTML(elem_id="box")
-            with gr.Row():
-                message = gr.Textbox(label="Write A Message", scale=4)
-                clear = gr.ClearButton()
+            message = gr.Textbox(label="Write A Message", scale=4)
+            clear = gr.ClearButton()
+            with gr.Accordion(label="Agent Thoughts", open=False):
+                console = gr.HTML()
+        with gr.Column():
+            gr.Markdown(README_STR)
 
-            message.submit(
-                self._handle_user_message,
-                [message, chat_window],
-                [message, chat_window],
-                queue=False,
-            ).then(
-                self._generate_response,
-                chat_window,
-                [chat_window, console],
-            )
-            clear.click(self._reset_chat, None, [message, chat_window, console])
+    message.submit(
+        runner._handle_user_message,
+        [message, chat_window],
+        [message, chat_window],
+        queue=False,
+    ).then(
+        runner._generate_response,
+        chat_window,
+        [chat_window, console],
+    )
+    clear.click(runner._reset_chat, None, [message, chat_window, console])
 
-        demo.launch()
-
-
+        
 if __name__ == "__main__":
-    GradioReActAgentPack(run_from_main=True).run()
+    demo.launch()
