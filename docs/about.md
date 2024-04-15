@@ -13,5 +13,5 @@ Sphinx도 좋았는데, 이게 더 명확한 것 같기도하고..
 ```python
 import os
 import torch
-print("wow")
+print("hello world.")
 ```
