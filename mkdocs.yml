@@ -2,9 +2,6 @@ site_name: Broccoli
 nav:
   - Home: index.md
   - About: about.md
-  - Hands-on:
-    - ./hands-on/n01_multi_turn_chat/README.md
-    - ./hands-on/n02_react_agent/README.md
   - Examples:
     - ./examples/index.md
     - Agents:
@@ -39,6 +36,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list
+  - tables
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
