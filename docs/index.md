@@ -10,6 +10,14 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 | `PUT`       | :material-check-all: Update resource |
 | `DELETE`    | :material-close:     Delete resource |
 
+## Sortable Table from a file
+
+```
+{{ read_csv('assets/basic_table.csv') }}
+```
+
+{{ read_csv('assets/basic_table.csv') }}
+
 ## Tabbed Code Snippets
 
 === "C"

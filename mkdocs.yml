@@ -20,6 +20,7 @@ plugins:
   - include_dir_to_nav
   - search
   - plotly
+  - table-reader
 theme:
   name: material
   features:
