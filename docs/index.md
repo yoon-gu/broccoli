@@ -13,7 +13,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 ## Sortable Table from a file
 
 ```
-{{ read_csv('assets/basic_table.csv') }}
+read_csv('assets/basic_table.csv')
 ```
 
 {{ read_csv('assets/basic_table.csv') }}

@@ -28,6 +28,8 @@ theme:
   palette:
     primary: white
   language: ko
+  icon:
+    logo: material/hub
     
 markdown_extensions:
   - pymdownx.snippets:
