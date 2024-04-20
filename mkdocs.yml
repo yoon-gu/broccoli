@@ -21,6 +21,8 @@ plugins:
   - search
   - plotly
   - table-reader
+  - git-revision-date-localized
+  - git-authors
 theme:
   name: material
   features:
