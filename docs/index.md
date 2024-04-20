@@ -2,6 +2,12 @@
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
+| Method      | Description                          |
+| ----------- | ------------------------------------ |
+| `GET`       | :material-check:     Fetch resource  |
+| `PUT`       | :material-check-all: Update resource |
+| `DELETE`    | :material-close:     Delete resource |
+
 ## Commands
 
 * `mkdocs new [dir-name]` - Create a new project.
