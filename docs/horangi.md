@@ -17,16 +17,16 @@ Multi-turn 대화를 통해 생성 능력을 평가하는 MT-Bench
 
 === "AVG"
 
-    {{ read_csv('assets/horangi_benchmark_avg.csv') }}
+    {{ read_csv('assets/horangi_benchmark_avg.csv', floatfmt=".2f") }}
 
 === "Abilities"
 
-    {{ read_csv('assets/horangi_benchmark_3.csv') }}
+    {{ read_csv('assets/horangi_benchmark_3.csv', floatfmt=".2f") }}
 
 === "EL,FA,NLI,QA,RC"
 
-    {{ read_csv('assets/horangi_benchmark_2.csv') }}
+    {{ read_csv('assets/horangi_benchmark_2.csv', floatfmt=".2f") }}
 
 === "ALL"
 
-    {{ read_csv('assets/horangi_benchmark.csv') }}
+    {{ read_csv('assets/horangi_benchmark.csv', floatfmt=".2f") }}

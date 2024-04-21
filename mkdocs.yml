@@ -29,6 +29,13 @@ theme:
   name: material
   features:
     - content.code.copy
+    - search.suggest
+    - search.highlight
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.integrate
   palette:
     primary: white
   language: ko
@@ -55,6 +62,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
 
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
