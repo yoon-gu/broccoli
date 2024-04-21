@@ -11,3 +11,8 @@ $ python main.py
 ```bash
 $ mkdocs serve
 ```
+
+## TODOs
+
+1. https://www.mkdocs.org/user-guide/configuration/#edit_uri_template
+1. https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=instant+previews#instant-previews
