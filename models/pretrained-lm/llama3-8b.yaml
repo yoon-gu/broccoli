@@ -1,0 +1,24 @@
+- url: meta-llama/Meta-Llama-3-8B
+- params: 8B
+- context length: 8196
+- train data tokens: 15T
+- architecture: Llama
+- release_date: 2024-04-18
+- inference_minimum_spec:
+  - bf16:
+    - a100-40gb: 1
+    - a100-80gb: 1
+- train_minimum_spec:
+  - bf16:
+    - a100-80gb: 4
+- en-benchmarks:
+  - mmlu: 1
+  - truthful: 1
+- ko-benchmarks:
+  - kobest:
+    - 0-shot:
+      - hellaswag: 2
+      - truthful: 4
+    - 5-shot:
+      - hellaswag: 2
+      - truthful: 4
