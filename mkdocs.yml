@@ -1,6 +1,8 @@
 site_name: Broccoli
 nav:
-  - Home: index.md
+  - Home:
+    - index.md
+    - horangi.md
   - About: about.md
   - Examples:
     - ./examples/index.md
