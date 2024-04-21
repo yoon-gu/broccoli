@@ -1,0 +1,24 @@
+model name,coding,extraction,humanities,math,reasoning,roleplay,stem,writing
+openai/gpt-4,8.35,9.25,9.9,6.25,7.55,8.35,9.75,9.15
+gemini-pro,6.75,9.5,9.8,6.4,6.6,7.625,9.9,8.55
+mistral-large,8.35,9.25,9.2,6.6,5.65,8.8,9.45,9.5
+yanolja/EEVE-Korean-Instruct-10.8B-v1.0,5.4,7.975,9.3,3.95,4.4,7.7,8.75,8.1
+openai/gpt-3.5-turbo,7.05,8.5,9.65,5.7,6.2,8.35,8.8,8.3
+mistralai/Mixtral-8x7B-Instruct-v0.1,6.55,7.95,8.95,4.15,6.75,7.9,8,8.8
+nlpai-lab/KULLM3,4.75,5.85,8.9,4.3,5.3,7.15,7.85,6.5
+mistral-medium,6.8,9.2,8.2,5.5,5.5,8.85,9,8.7
+anthropic.claude-v2:1,6.85,8.95,8.45,6.75,6.2,6.95,9.2,6.35
+Edentns/DataVortexS-10.7B-dpo-v1.11,4.95,4.95,8.15,2.5,4.55,6.05,5.9,5
+ONS-SOLAR-10.7B-v1.2,2.95,5.15,6.15,2.7,3.3,6.6,7.25,3.45
+Raphael21/Raphael21-SOLAR-10.7B,4.5,4.35,5.3,1.8,2.75,6.25,4.65,4.7
+LDCC-SOLAR-10.7B,4.45,3.65,6.9,2,3.2,6.35,5.3,6.25
+beomi/SOLAR-KOEN-10.8B,1.8,2.3,5.7,1.35,2.4,4.7,4.55,4
+beomi/OPEN-SOLAR-KO-10.7B,1.1,3.3,2.35,1.5,3.55,3.1,2.05,3.05
+KT-AI/midm-bitext-S-7B-inst-v1,1,1,1,1,1,1,0.9,0.9
+42dot/42dot_LLM-SFT-1.3B,1.15,2,1.75,1.2,1.1,3.85,2.4,3.25
+nlpai-lab/kullm-polyglot-5.8b-v2,1.3,1.5,1.2,1.25,1.4,1.95,2,1
+beomi/gemma-ko-7b,0.9,1.05,1.2,0.85,1,1.55,1.15,1.05
+nlpai-lab/kullm-polyglot-12.8b-v2,0.7,0.95,0.75,0.6,0.85,0.9,0.9,0.9
+EleutherAI/polyglot-ko-5.8b,0.95,1,1.05,1.4,1,1.7,1.05,0.75
+megastudyedu/M-SOLAR-10.7B-v1.4-dpo,1,0.9,0.8,0.95,1.3,0.8,0.9,0.95
+EleutherAI/polyglot-ko-12.8b,1,0.75,0.85,0.8,0.75,0.9,0.9,0.9

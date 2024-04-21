@@ -15,5 +15,18 @@ Multi-turn 대화를 통해 생성 능력을 평가하는 MT-Bench
 
 ## Benchmarks
 
-{{ read_csv('assets/horangi_benchmark.csv') }}
+=== "AVG"
 
+    {{ read_csv('assets/horangi_benchmark_avg.csv') }}
+
+=== "Abilities"
+
+    {{ read_csv('assets/horangi_benchmark_3.csv') }}
+
+=== "EL,FA,NLI,QA,RC"
+
+    {{ read_csv('assets/horangi_benchmark_2.csv') }}
+
+=== "ALL"
+
+    {{ read_csv('assets/horangi_benchmark.csv') }}
