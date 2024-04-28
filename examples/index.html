@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../about/" rel="prev"/>
+<link href="agent/react_agent/" rel="next"/>
+<link href="../images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.19" name="generator"/>
+<title>Examples - Broccoli</title>
+<link href="../assets/stylesheets/main.66ac8b77.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#examples">
+          콘텐츠로 이동
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="상단/헤더" class="md-header__inner md-grid">
+<a aria-label="Broccoli" class="md-header__button md-logo" data-md-component="logo" href=".." title="Broccoli">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.4 18.2c.4.5.6 1.1.6 1.8 0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c.4 0 .8.1 1.2.3l1.4-1.8c-.9-1-1.3-2.4-1.1-3.7l-2-.7c-.5.8-1.4 1.4-2.5 1.4-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3v.2l2 .7c.6-1.2 1.8-2.1 3.2-2.3V5.9C10 5.6 9 4.4 9 3c0-1.7 1.3-3 3-3s3 1.3 3 3c0 1.4-1 2.6-2.2 2.9v2.2c1.4.2 2.6 1.1 3.2 2.3l2-.7v-.2c0-1.7 1.3-3 3-3s3 1.3 3 3-1.3 3-3 3c-1.1 0-2-.6-2.5-1.4l-2 .7c.2 1.3-.2 2.7-1.1 3.7l1.4 1.8c.4-.2.8-.3 1.2-.3 1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3c0-.7.2-1.3.6-1.8l-1.4-1.8c-1.4.8-3 .8-4.4 0l-1.4 1.8Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Broccoli
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Examples
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="검색" class="md-search__options">
+<button aria-label="지우기" class="md-search__icon md-icon" tabindex="-1" title="지우기" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            검색 초기화
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://google.com" title="저장소로 이동">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m503.5 204.6-.7-1.8-69.7-181.78c-1.4-3.57-3.9-6.59-7.2-8.64-2.4-1.55-5.1-2.515-8-2.81-2.9-.295-5.7.083-8.4 1.11-2.7 1.02-5.1 2.66-7.1 4.78-1.9 2.12-3.3 4.67-4.1 7.44l-47 144H160.8l-47.1-144c-.8-2.77-2.2-5.31-4.1-7.43-2-2.12-4.4-3.75-7.1-4.77a18.1 18.1 0 0 0-8.38-1.113 18.4 18.4 0 0 0-8.04 2.793 18.09 18.09 0 0 0-7.16 8.64L9.267 202.8l-.724 1.8a129.57 129.57 0 0 0-3.52 82c7.747 26.9 24.047 50.7 46.447 67.6l.27.2.59.4 105.97 79.5 52.6 39.7 32 24.2c3.7 1.9 8.3 4.3 13 4.3 4.7 0 9.3-2.4 13-4.3l32-24.2 52.6-39.7 106.7-79.9.3-.3c22.4-16.9 38.7-40.6 45.6-67.5 8.6-27 7.4-55.8-2.6-82z"></path></svg>
+</div>
+<div class="md-source__repository">
+    Brocoli
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="탭" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
+          
+  
+    
+  
+  Home
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../about/">
+        
+  
+    
+  
+  About
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
+          
+  
+    
+  
+  Examples
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="네비게이션" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Broccoli" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Broccoli">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.4 18.2c.4.5.6 1.1.6 1.8 0 1.7-1.3 3-3 3s-3-1.3-3-3 1.3-3 3-3c.4 0 .8.1 1.2.3l1.4-1.8c-.9-1-1.3-2.4-1.1-3.7l-2-.7c-.5.8-1.4 1.4-2.5 1.4-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3v.2l2 .7c.6-1.2 1.8-2.1 3.2-2.3V5.9C10 5.6 9 4.4 9 3c0-1.7 1.3-3 3-3s3 1.3 3 3c0 1.4-1 2.6-2.2 2.9v2.2c1.4.2 2.6 1.1 3.2 2.3l2-.7v-.2c0-1.7 1.3-3 3-3s3 1.3 3 3-1.3 3-3 3c-1.1 0-2-.6-2.5-1.4l-2 .7c.2 1.3-.2 2.7-1.1 3.7l1.4 1.8c.4-.2.8-.3 1.2-.3 1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3c0-.7.2-1.3.6-1.8l-1.4-1.8c-1.4.8-3 .8-4.4 0l-1.4 1.8Z"></path></svg>
+</a>
+    Broccoli
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://google.com" title="저장소로 이동">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m503.5 204.6-.7-1.8-69.7-181.78c-1.4-3.57-3.9-6.59-7.2-8.64-2.4-1.55-5.1-2.515-8-2.81-2.9-.295-5.7.083-8.4 1.11-2.7 1.02-5.1 2.66-7.1 4.78-1.9 2.12-3.3 4.67-4.1 7.44l-47 144H160.8l-47.1-144c-.8-2.77-2.2-5.31-4.1-7.43-2-2.12-4.4-3.75-7.1-4.77a18.1 18.1 0 0 0-8.38-1.113 18.4 18.4 0 0 0-8.04 2.793 18.09 18.09 0 0 0-7.16 8.64L9.267 202.8l-.724 1.8a129.57 129.57 0 0 0-3.52 82c7.747 26.9 24.047 50.7 46.447 67.6l.27.2.59.4 105.97 79.5 52.6 39.7 32 24.2c3.7 1.9 8.3 4.3 13 4.3 4.7 0 9.3-2.4 13-4.3l32-24.2 52.6-39.7 106.7-79.9.3-.3c22.4-16.9 38.7-40.6 45.6-67.5 8.6-27 7.4-55.8-2.6-82z"></path></svg>
+</div>
+<div class="md-source__repository">
+    Brocoli
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../horangi/">
+<span class="md-ellipsis">
+    Horangi 한국어 LLM 벤치마크
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../about/">
+<span class="md-ellipsis">
+    About
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Examples
+  </span>
+</a>
+<label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Agents
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Agents
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="agent/react_agent/">
+<span class="md-ellipsis">
+    ReAct Agent - A Simple Intro with Calculator Tools
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="agent/react_agent_with_query_engine/">
+<span class="md-ellipsis">
+    ReAct Agent with Query Engine (RAG) Tools
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Pipelines
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            Pipelines
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="pipeline/query_pipeline/">
+<span class="md-ellipsis">
+    An Introduction to LlamaIndex Query Pipelines
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="pipeline/query_pipeline_pandas/">
+<span class="md-ellipsis">
+    Query Pipeline over Pandas DataFrames
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="pipeline/query_pipeline_routing/">
+<span class="md-ellipsis">
+    Query Pipeline with Routing
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Query Engines
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+            Query Engines
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="query_engine/pandas_query_engine/">
+<span class="md-ellipsis">
+    Pandas Query Engine
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="query_engine/RouterQueryEngine/">
+<span class="md-ellipsis">
+    Router Query Engine
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">¶</a></h1>
+<p>In the navigation to the left, you will find many example notebooks, displaying the usage of various llama-index components and use-cases.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/plotly/datasets/master/Mining-BTC-180.csv"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"Date"</span><span class="p">]):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">" 00:00:00"</span><span class="p">)</span>
+    <span class="n">datetime</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"Date"</span><span class="p">][</span><span class="n">i</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span>
+    <span class="n">rows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">shared_xaxes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">vertical_spacing</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span>
+    <span class="n">specs</span><span class="o">=</span><span class="p">[[{</span><span class="s2">"type"</span><span class="p">:</span> <span class="s2">"table"</span><span class="p">}],</span>
+           <span class="p">[{</span><span class="s2">"type"</span><span class="p">:</span> <span class="s2">"scatter"</span><span class="p">}],</span>
+           <span class="p">[{</span><span class="s2">"type"</span><span class="p">:</span> <span class="s2">"scatter"</span><span class="p">}]]</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">"Date"</span><span class="p">],</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">"Mining-revenue-USD"</span><span class="p">],</span>
+        <span class="n">mode</span><span class="o">=</span><span class="s2">"lines"</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">"mining revenue"</span>
+    <span class="p">),</span>
+    <span class="n">row</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">"Date"</span><span class="p">],</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">"Hash-rate"</span><span class="p">],</span>
+        <span class="n">mode</span><span class="o">=</span><span class="s2">"lines"</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">"hash-rate-TH/s"</span>
+    <span class="p">),</span>
+    <span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Table</span><span class="p">(</span>
+        <span class="n">header</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="s2">"Date"</span><span class="p">,</span> <span class="s2">"Number&lt;br&gt;Transactions"</span><span class="p">,</span> <span class="s2">"Output&lt;br&gt;Volume (BTC)"</span><span class="p">,</span>
+                    <span class="s2">"Market&lt;br&gt;Price"</span><span class="p">,</span> <span class="s2">"Hash&lt;br&gt;Rate"</span><span class="p">,</span> <span class="s2">"Cost per&lt;br&gt;trans-USD"</span><span class="p">,</span>
+                    <span class="s2">"Mining&lt;br&gt;Revenue-USD"</span><span class="p">,</span> <span class="s2">"Trasaction&lt;br&gt;fees-BTC"</span><span class="p">],</span>
+            <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span>
+            <span class="n">align</span><span class="o">=</span><span class="s2">"left"</span>
+        <span class="p">),</span>
+        <span class="n">cells</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:]],</span>
+            <span class="n">align</span> <span class="o">=</span> <span class="s2">"left"</span><span class="p">)</span>
+    <span class="p">),</span>
+    <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">title_text</span><span class="o">=</span><span class="s2">"Bitcoin mining stats for 180 days"</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./docs/assets/test.json"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">fig</span><span class="o">.</span><span class="n">to_json</span><span class="p">())</span>
+</code></pre></div>
+<div class="mkdocs-plotly">{"data":[{"mode":"lines","name":"mining revenue","x":["2017-04-29","2017-04-30","2017-05-01","2017-05-02","2017-05-03","2017-05-04","2017-05-05","2017-05-06","2017-05-07","2017-05-08","2017-05-09","2017-05-10","2017-05-11","2017-05-12","2017-05-13","2017-05-14","2017-05-15","2017-05-16","2017-05-17","2017-05-18","2017-05-19","2017-05-20","2017-05-21","2017-05-22","2017-05-23","2017-05-24","2017-05-25","2017-05-26","2017-05-27","2017-05-28","2017-05-29","2017-05-30","2017-05-31","2017-06-01","2017-06-02","2017-06-03","2017-06-04","2017-06-05","2017-06-06","2017-06-07","2017-06-08","2017-06-09","2017-06-10","2017-06-11","2017-06-12","2017-06-13","2017-06-14","2017-06-15","2017-06-16","2017-06-17","2017-06-18","2017-06-19","2017-06-20","2017-06-21","2017-06-22","2017-06-23","2017-06-24","2017-06-25","2017-06-26","2017-06-27","2017-06-28","2017-06-29","2017-06-30","2017-07-01","2017-07-02","2017-07-03","2017-07-04","2017-07-05","2017-07-06","2017-07-07","2017-07-08","2017-07-09","2017-07-10","2017-07-11","2017-07-12","2017-07-13","2017-07-14","2017-07-15","2017-07-16","2017-07-17","2017-07-18","2017-07-19","2017-07-20","2017-07-21","2017-07-22","2017-07-23","2017-07-24","2017-07-25","2017-07-26","2017-07-27","2017-07-28","2017-07-29","2017-07-30","2017-07-31","2017-08-01","2017-08-02","2017-08-03","2017-08-04","2017-08-05","2017-08-06","2017-08-07","2017-08-08","2017-08-09","2017-08-10","2017-08-11","2017-08-12","2017-08-13","2017-08-14","2017-08-15","2017-08-16","2017-08-17","2017-08-18","2017-08-19","2017-08-20","2017-08-21","2017-08-22","2017-08-23","2017-08-24","2017-08-25","2017-08-26","2017-08-27","2017-08-28","2017-08-29","2017-08-30","2017-08-31","2017-09-01","2017-09-02","2017-09-03","2017-09-04","2017-09-05","2017-09-06","2017-09-07","2017-09-08","2017-09-09","2017-09-10","2017-09-11","2017-09-12","2017-09-13","2017-09-14","2017-09-15","2017-09-16","2017-09-17","2017-09-18","2017-09-19","2017-09-20","2017-09-21","2017-09-22","2017-09-23","2017-09-24","2017-09-25","2017-09-26","2017-09-27","2017-09-28","2017-09-29","2017-09-30","2017-10-01","2017-10-02","2017-10-03","2017-10-04","2017-10-05","2017-10-06","2017-10-07","2017-10-08","2017-10-09","2017-10-10","2017-10-11","2017-10-12","2017-10-13","2017-10-14","2017-10-15","2017-10-16","2017-10-17","2017-10-18","2017-10-19","2017-10-20","2017-10-21","2017-10-22","2017-10-23","2017-10-24"],"y":[3119179,2720216,2878278,3149553,2760373,3500746,2779170,3610789,3505620,4062173,3715394,3665041,3468077,3731718,3885821,4018028,4090703,3356332,4241264,3986175,4746880,4862317,4331490,4499105,5668946,5524488,5871334,5119620,5121737,5262057,5260814,6132064,5808558,6245229,5437775,7190853,5967105,6586584,6705146,7060708,6905690,6408509,5916953,6255384,5779114,5967684,5217093,5540766,5304594,5461151,5066180,5761788,5639440,5729388,5791396,6125532,5333680,4323782,5067818,4893545,5859694,4529058,5463199,5415823,6165437,5975339,5536125,5284211,5092047,5027244,5589288,4618491,6117733,5418690,5595773,4943868,4133223,3915180,4114452,4307538,5135591,4503487,6303560,5613835,5890365,5998935,6381473,4978580,4829128,5348203,5563273,5536230,5226926,5550845,5102353,5295684,5009853,6553817,7255240,5802572,6700312,7395324,6117049,6163928,7130611,7067967,8147957,7782196,9146734,8320553,10849951,8775120,8768358,7392849,6787387,5749752,10230715,6929316,7153228,7319122,9642616,8451776,10384095,11046351,11260487,12131998,10374578,9700710,10527922,11928774,10290919,11050159,10028960,9554034,7845878,9592187,10193192,9617967,7489085,8227898,8161423,8368700,6960685,8091884,6147322,8287404,6520223,7983282,6815446,6522957,7065925,8033184,9528010,9047637,7690943,7369622,8729899,10134350,7436308,7204664,8954116,8787393,10645076,9983564,10009312,8773874,10754101,10610179,11022592,14217107,13050105,12204887,11106218,13368297,13875337,12037733,14108349,13224118,12165126],"type":"scatter","xaxis":"x2","yaxis":"y2"},{"mode":"lines","name":"hash-rate-TH\u002fs","x":["2017-04-29","2017-04-30","2017-05-01","2017-05-02","2017-05-03","2017-05-04","2017-05-05","2017-05-06","2017-05-07","2017-05-08","2017-05-09","2017-05-10","2017-05-11","2017-05-12","2017-05-13","2017-05-14","2017-05-15","2017-05-16","2017-05-17","2017-05-18","2017-05-19","2017-05-20","2017-05-21","2017-05-22","2017-05-23","2017-05-24","2017-05-25","2017-05-26","2017-05-27","2017-05-28","2017-05-29","2017-05-30","2017-05-31","2017-06-01","2017-06-02","2017-06-03","2017-06-04","2017-06-05","2017-06-06","2017-06-07","2017-06-08","2017-06-09","2017-06-10","2017-06-11","2017-06-12","2017-06-13","2017-06-14","2017-06-15","2017-06-16","2017-06-17","2017-06-18","2017-06-19","2017-06-20","2017-06-21","2017-06-22","2017-06-23","2017-06-24","2017-06-25","2017-06-26","2017-06-27","2017-06-28","2017-06-29","2017-06-30","2017-07-01","2017-07-02","2017-07-03","2017-07-04","2017-07-05","2017-07-06","2017-07-07","2017-07-08","2017-07-09","2017-07-10","2017-07-11","2017-07-12","2017-07-13","2017-07-14","2017-07-15","2017-07-16","2017-07-17","2017-07-18","2017-07-19","2017-07-20","2017-07-21","2017-07-22","2017-07-23","2017-07-24","2017-07-25","2017-07-26","2017-07-27","2017-07-28","2017-07-29","2017-07-30","2017-07-31","2017-08-01","2017-08-02","2017-08-03","2017-08-04","2017-08-05","2017-08-06","2017-08-07","2017-08-08","2017-08-09","2017-08-10","2017-08-11","2017-08-12","2017-08-13","2017-08-14","2017-08-15","2017-08-16","2017-08-17","2017-08-18","2017-08-19","2017-08-20","2017-08-21","2017-08-22","2017-08-23","2017-08-24","2017-08-25","2017-08-26","2017-08-27","2017-08-28","2017-08-29","2017-08-30","2017-08-31","2017-09-01","2017-09-02","2017-09-03","2017-09-04","2017-09-05","2017-09-06","2017-09-07","2017-09-08","2017-09-09","2017-09-10","2017-09-11","2017-09-12","2017-09-13","2017-09-14","2017-09-15","2017-09-16","2017-09-17","2017-09-18","2017-09-19","2017-09-20","2017-09-21","2017-09-22","2017-09-23","2017-09-24","2017-09-25","2017-09-26","2017-09-27","2017-09-28","2017-09-29","2017-09-30","2017-10-01","2017-10-02","2017-10-03","2017-10-04","2017-10-05","2017-10-06","2017-10-07","2017-10-08","2017-10-09","2017-10-10","2017-10-11","2017-10-12","2017-10-13","2017-10-14","2017-10-15","2017-10-16","2017-10-17","2017-10-18","2017-10-19","2017-10-20","2017-10-21","2017-10-22","2017-10-23","2017-10-24"],"y":[4488916,3918072,3892124,4099704,3425069,4359179,3347227,4359179,4333232,4670549,4021862,4119773,3757901,4286791,4398136,4565154,4732172,3674392,4314627,3952755,4565154,4592990,4091937,4064100,4976738,4562010,4828621,4532386,4976738,4887867,4473139,5302596,4858244,5035985,4325022,5687700,5432357,5533581,5094944,5567322,5567322,5094944,4757530,4926237,4959978,4757530,4723789,5162426,4993720,5129906,5129906,5342178,4882255,4953012,4917634,5660586,5165284,4316196,5023770,4634604,5554450,4245439,5448314,5802100,6622799,5988701,5389831,5248920,5002327,5213693,5812563,4861416,6939848,6094384,6235295,5530742,5559050,5079132,6518886,5918988,6598872,5958981,6478893,6158947,6398906,6878824,7118783,5918988,5878995,6585327,6414280,6713613,6285994,6200471,6371518,6499804,5901138,7654374,7568850,5986661,6542566,7012946,6333395,6149818,6608760,6195712,6792336,5966241,6975913,5966241,8215055,6838231,6930019,5966241,5277829,4084581,7297172,4459278,4459278,4635883,6843446,5695513,6578538,7417412,7196656,7682320,7240807,6799294,7726471,8697799,7430761,8072925,8027056,7751843,6329907,7981187,8623352,8715090,7981187,8256401,7751843,8072925,6965995,8556656,6417492,9653663,7624200,9105159,7953302,6856295,7569349,8063003,9708513,9269710,7569349,7130547,8380132,10223761,7486251,6983443,8882940,8827072,10167894,8994675,8938808,7765589,8547735,7597986,7877324,11601113,10351762,9756834,8983426,10589734,10649227,9102412,10827706,10173284,9935312],"type":"scatter","xaxis":"x","yaxis":"y"},{"cells":{"align":"left","values":[["2017-04-29","2017-04-30","2017-05-01","2017-05-02","2017-05-03","2017-05-04","2017-05-05","2017-05-06","2017-05-07","2017-05-08","2017-05-09","2017-05-10","2017-05-11","2017-05-12","2017-05-13","2017-05-14","2017-05-15","2017-05-16","2017-05-17","2017-05-18","2017-05-19","2017-05-20","2017-05-21","2017-05-22","2017-05-23","2017-05-24","2017-05-25","2017-05-26","2017-05-27","2017-05-28","2017-05-29","2017-05-30","2017-05-31","2017-06-01","2017-06-02","2017-06-03","2017-06-04","2017-06-05","2017-06-06","2017-06-07","2017-06-08","2017-06-09","2017-06-10","2017-06-11","2017-06-12","2017-06-13","2017-06-14","2017-06-15","2017-06-16","2017-06-17","2017-06-18","2017-06-19","2017-06-20","2017-06-21","2017-06-22","2017-06-23","2017-06-24","2017-06-25","2017-06-26","2017-06-27","2017-06-28","2017-06-29","2017-06-30","2017-07-01","2017-07-02","2017-07-03","2017-07-04","2017-07-05","2017-07-06","2017-07-07","2017-07-08","2017-07-09","2017-07-10","2017-07-11","2017-07-12","2017-07-13","2017-07-14","2017-07-15","2017-07-16","2017-07-17","2017-07-18","2017-07-19","2017-07-20","2017-07-21","2017-07-22","2017-07-23","2017-07-24","2017-07-25","2017-07-26","2017-07-27","2017-07-28","2017-07-29","2017-07-30","2017-07-31","2017-08-01","2017-08-02","2017-08-03","2017-08-04","2017-08-05","2017-08-06","2017-08-07","2017-08-08","2017-08-09","2017-08-10","2017-08-11","2017-08-12","2017-08-13","2017-08-14","2017-08-15","2017-08-16","2017-08-17","2017-08-18","2017-08-19","2017-08-20","2017-08-21","2017-08-22","2017-08-23","2017-08-24","2017-08-25","2017-08-26","2017-08-27","2017-08-28","2017-08-29","2017-08-30","2017-08-31","2017-09-01","2017-09-02","2017-09-03","2017-09-04","2017-09-05","2017-09-06","2017-09-07","2017-09-08","2017-09-09","2017-09-10","2017-09-11","2017-09-12","2017-09-13","2017-09-14","2017-09-15","2017-09-16","2017-09-17","2017-09-18","2017-09-19","2017-09-20","2017-09-21","2017-09-22","2017-09-23","2017-09-24","2017-09-25","2017-09-26","2017-09-27","2017-09-28","2017-09-29","2017-09-30","2017-10-01","2017-10-02","2017-10-03","2017-10-04","2017-10-05","2017-10-06","2017-10-07","2017-10-08","2017-10-09","2017-10-10","2017-10-11","2017-10-12","2017-10-13","2017-10-14","2017-10-15","2017-10-16","2017-10-17","2017-10-18","2017-10-19","2017-10-20","2017-10-21","2017-10-22","2017-10-23","2017-10-24"],[341319,281489,294786,333161,295149,354737,267193,363022,316011,365096,332879,311391,294743,317698,329266,369098,329229,233977,317527,288904,319502,352805,326057,327868,367710,338642,350114,333340,331914,308143,321638,347961,321634,319709,271539,305320,266044,289930,297416,339720,307377,282184,254993,222892,269098,291776,287644,293141,269937,236554,209359,269774,269438,280203,269685,259938,227127,180719,261906,259737,279811,231054,267360,221856,196539,253244,255483,237008,225106,243614,220835,188124,251722,265759,257138,245895,227903,221851,203165,230315,260575,253768,230199,268443,223358,181031,240072,244036,237853,225369,247207,211134,184145,231012,131875,209321,213017,235792,239771,199627,249002,275574,260955,257965,284001,260521,263310,255362,311002,274866,347319,312250,266832,210852,236772,196283,315734,203805,208169,226485,261891,223771,281116,271466,280724,283670,236811,195289,269280,277948,276225,256374,279488,217890,193240,253492,256230,263320,268068,292079,228257,197683,218204,282917,235723,255257,227615,203861,185277,226603,263648,257961,275976,254438,212678,203653,295002,282132,232826,273243,283699,231226,238385,296946,303101,292459,293164,309819,293140,283473,314725,334438,329579,356985,312409,312257,289131,316096,347220],[4488916,3918072,3892124,4099704,3425069,4359179,3347227,4359179,4333232,4670549,4021862,4119773,3757901,4286791,4398136,4565154,4732172,3674392,4314627,3952755,4565154,4592990,4091937,4064100,4976738,4562010,4828621,4532386,4976738,4887867,4473139,5302596,4858244,5035985,4325022,5687700,5432357,5533581,5094944,5567322,5567322,5094944,4757530,4926237,4959978,4757530,4723789,5162426,4993720,5129906,5129906,5342178,4882255,4953012,4917634,5660586,5165284,4316196,5023770,4634604,5554450,4245439,5448314,5802100,6622799,5988701,5389831,5248920,5002327,5213693,5812563,4861416,6939848,6094384,6235295,5530742,5559050,5079132,6518886,5918988,6598872,5958981,6478893,6158947,6398906,6878824,7118783,5918988,5878995,6585327,6414280,6713613,6285994,6200471,6371518,6499804,5901138,7654374,7568850,5986661,6542566,7012946,6333395,6149818,6608760,6195712,6792336,5966241,6975913,5966241,8215055,6838231,6930019,5966241,5277829,4084581,7297172,4459278,4459278,4635883,6843446,5695513,6578538,7417412,7196656,7682320,7240807,6799294,7726471,8697799,7430761,8072925,8027056,7751843,6329907,7981187,8623352,8715090,7981187,8256401,7751843,8072925,6965995,8556656,6417492,9653663,7624200,9105159,7953302,6856295,7569349,8063003,9708513,9269710,7569349,7130547,8380132,10223761,7486251,6983443,8882940,8827072,10167894,8994675,8938808,7765589,8547735,7597986,7877324,11601113,10351762,9756834,8983426,10589734,10649227,9102412,10827706,10173284,9935312],[3119179,2720216,2878278,3149553,2760373,3500746,2779170,3610789,3505620,4062173,3715394,3665041,3468077,3731718,3885821,4018028,4090703,3356332,4241264,3986175,4746880,4862317,4331490,4499105,5668946,5524488,5871334,5119620,5121737,5262057,5260814,6132064,5808558,6245229,5437775,7190853,5967105,6586584,6705146,7060708,6905690,6408509,5916953,6255384,5779114,5967684,5217093,5540766,5304594,5461151,5066180,5761788,5639440,5729388,5791396,6125532,5333680,4323782,5067818,4893545,5859694,4529058,5463199,5415823,6165437,5975339,5536125,5284211,5092047,5027244,5589288,4618491,6117733,5418690,5595773,4943868,4133223,3915180,4114452,4307538,5135591,4503487,6303560,5613835,5890365,5998935,6381473,4978580,4829128,5348203,5563273,5536230,5226926,5550845,5102353,5295684,5009853,6553817,7255240,5802572,6700312,7395324,6117049,6163928,7130611,7067967,8147957,7782196,9146734,8320553,10849951,8775120,8768358,7392849,6787387,5749752,10230715,6929316,7153228,7319122,9642616,8451776,10384095,11046351,11260487,12131998,10374578,9700710,10527922,11928774,10290919,11050159,10028960,9554034,7845878,9592187,10193192,9617967,7489085,8227898,8161423,8368700,6960685,8091884,6147322,8287404,6520223,7983282,6815446,6522957,7065925,8033184,9528010,9047637,7690943,7369622,8729899,10134350,7436308,7204664,8954116,8787393,10645076,9983564,10009312,8773874,10754101,10610179,11022592,14217107,13050105,12204887,11106218,13368297,13875337,12037733,14108349,13224118,12165126],[4488916,3918072,3892124,4099704,3425069,4359179,3347227,4359179,4333232,4670549,4021862,4119773,3757901,4286791,4398136,4565154,4732172,3674392,4314627,3952755,4565154,4592990,4091937,4064100,4976738,4562010,4828621,4532386,4976738,4887867,4473139,5302596,4858244,5035985,4325022,5687700,5432357,5533581,5094944,5567322,5567322,5094944,4757530,4926237,4959978,4757530,4723789,5162426,4993720,5129906,5129906,5342178,4882255,4953012,4917634,5660586,5165284,4316196,5023770,4634604,5554450,4245439,5448314,5802100,6622799,5988701,5389831,5248920,5002327,5213693,5812563,4861416,6939848,6094384,6235295,5530742,5559050,5079132,6518886,5918988,6598872,5958981,6478893,6158947,6398906,6878824,7118783,5918988,5878995,6585327,6414280,6713613,6285994,6200471,6371518,6499804,5901138,7654374,7568850,5986661,6542566,7012946,6333395,6149818,6608760,6195712,6792336,5966241,6975913,5966241,8215055,6838231,6930019,5966241,5277829,4084581,7297172,4459278,4459278,4635883,6843446,5695513,6578538,7417412,7196656,7682320,7240807,6799294,7726471,8697799,7430761,8072925,8027056,7751843,6329907,7981187,8623352,8715090,7981187,8256401,7751843,8072925,6965995,8556656,6417492,9653663,7624200,9105159,7953302,6856295,7569349,8063003,9708513,9269710,7569349,7130547,8380132,10223761,7486251,6983443,8882940,8827072,10167894,8994675,8938808,7765589,8547735,7597986,7877324,11601113,10351762,9756834,8983426,10589734,10649227,9102412,10827706,10173284,9935312],[9,10,10,10,10,10,11,10,11,12,12,12,12,12,12,11,13,15,14,14,15,14,14,14,16,17,17,16,16,18,17,18,19,20,21,24,23,24,23,21,23,23,24,29,22,21,19,20,20,24,25,22,22,21,22,24,24,25,20,19,22,20,21,25,32,24,22,23,23,21,26,25,25,21,23,21,19,18,21,19,20,18,28,22,27,34,27,21,21,25,23,27,29,25,40,26,24,29,31,30,28,28,24,25,26,28,32,31,31,31,32,29,34,36,30,30,33,35,35,33,38,39,38,42,41,44,45,52,41,44,39,45,37,45,42,39,41,38,29,29,37,44,33,30,27,33,30,40,38,30,28,32,36,37,37,37,31,37,33,27,33,39,46,35,34,31,38,36,39,52,43,38,35,39,46,40,50,43,36],[3119179,2720216,2878278,3149553,2760373,3500746,2779170,3610789,3505620,4062173,3715394,3665041,3468077,3731718,3885821,4018028,4090703,3356332,4241264,3986175,4746880,4862317,4331490,4499105,5668946,5524488,5871334,5119620,5121737,5262057,5260814,6132064,5808558,6245229,5437775,7190853,5967105,6586584,6705146,7060708,6905690,6408509,5916953,6255384,5779114,5967684,5217093,5540766,5304594,5461151,5066180,5761788,5639440,5729388,5791396,6125532,5333680,4323782,5067818,4893545,5859694,4529058,5463199,5415823,6165437,5975339,5536125,5284211,5092047,5027244,5589288,4618491,6117733,5418690,5595773,4943868,4133223,3915180,4114452,4307538,5135591,4503487,6303560,5613835,5890365,5998935,6381473,4978580,4829128,5348203,5563273,5536230,5226926,5550845,5102353,5295684,5009853,6553817,7255240,5802572,6700312,7395324,6117049,6163928,7130611,7067967,8147957,7782196,9146734,8320553,10849951,8775120,8768358,7392849,6787387,5749752,10230715,6929316,7153228,7319122,9642616,8451776,10384095,11046351,11260487,12131998,10374578,9700710,10527922,11928774,10290919,11050159,10028960,9554034,7845878,9592187,10193192,9617967,7489085,8227898,8161423,8368700,6960685,8091884,6147322,8287404,6520223,7983282,6815446,6522957,7065925,8033184,9528010,9047637,7690943,7369622,8729899,10134350,7436308,7204664,8954116,8787393,10645076,9983564,10009312,8773874,10754101,10610179,11022592,14217107,13050105,12204887,11106218,13368297,13875337,12037733,14108349,13224118,12165126],[256,199,228,273,247,307,261,297,277,316,303,303,280,322,301,297,327,343,486,392,443,388,353,407,468,473,499,470,529,421,495,588,570,569,470,546,442,475,511,668,491,456,391,356,410,479,455,435,375,311,278,387,388,463,447,339,307,259,375,368,386,341,357,255,198,283,294,226,242,241,192,157,206,208,222,211,215,378,167,198,225,202,229,250,171,125,167,168,168,166,188,156,138,195,76,131,124,113,114,88,122,159,158,193,235,211,190,249,350,348,365,338,266,209,298,334,542,386,426,425,359,378,462,388,413,383,290,239,325,282,273,257,218,145,143,160,149,134,154,13,120,99,168,174,146,136,117,100,84,147,150,143,134,115,101,119,180,153,137,160,149,108,112,149,167,148,174,282,228,163,193,209,192,192,162,168,155,186,200]]},"header":{"align":"left","font":{"size":10},"values":["Date","Number\u003cbr\u003eTransactions","Output\u003cbr\u003eVolume (BTC)","Market\u003cbr\u003ePrice","Hash\u003cbr\u003eRate","Cost per\u003cbr\u003etrans-USD","Mining\u003cbr\u003eRevenue-USD","Trasaction\u003cbr\u003efees-BTC"]},"type":"table","domain":{"x":[0.0,1.0],"y":[0.6866666666666665,0.9999999999999998]}}],"layout":{"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"matches":"x2","showticklabels":false},"yaxis":{"anchor":"x","domain":[0.34333333333333327,0.6566666666666665]},"xaxis2":{"anchor":"y2","domain":[0.0,1.0]},"yaxis2":{"anchor":"x2","domain":[0.0,0.3133333333333333]},"title":{"text":"Bitcoin mining stats for 180 days"},"height":800,"showlegend":false}}</div>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="마지막 업데이트">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 28, 2024</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="참여자들">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"></path></svg>
+</span>
+<nav>
+<a href="mailto:yz0624@gmail.com">Yoon-gu Hwang</a>
+</nav>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  맨위로
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="하단/푸터" class="md-footer__inner md-grid">
+<a aria-label="이전: About" class="md-footer__link md-footer__link--prev" href="../about/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                이전
+              </span>
+<div class="md-ellipsis">
+                About
+              </div>
+</div>
+</a>
+<a aria-label="다음: ReAct Agent - A Simple Intro with Calculator Tools" class="md-footer__link md-footer__link--next" href="agent/react_agent/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                다음
+              </span>
+<div class="md-ellipsis">
+                ReAct Agent - A Simple Intro with Calculator Tools
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2024 Yoon-gu Hwang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "search.suggest", "search.highlight", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "toc.integrate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
+<script src="../assets/javascripts/bundle.dd8806f2.min.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../javascripts/tablesort.js"></script>
+<span hidden="True" id="default-template-settings">{"font.color": "#2a3f5f", "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "#E5ECF6", "polar.bgcolor": "#E5ECF6", "polar.angularaxis.gridcolor": "white", "polar.angularaxis.linecolor": "white", "polar.radialaxis.gridcolor": "white", "polar.radialaxis.linecolor": "white", "ternary.bgcolor": "#E5ECF6", "ternary.aaxis.gridcolor": "white", "ternary.aaxis.linecolor": "white", "ternary.baxis.gridcolor": "white", "ternary.baxis.linecolor": "white", "ternary.caxis.gridcolor": "white", "ternary.caxis.linecolor": "white", "xaxis.gridcolor": "white", "xaxis.linecolor": "white", "xaxis.zerolinecolor": "white", "yaxis.gridcolor": "white", "yaxis.linecolor": "white", "yaxis.zerolinecolor": "white", "scene.xaxis.backgroundcolor": "#E5ECF6", "scene.xaxis.gridcolor": "white", "scene.xaxis.linecolor": "white", "scene.xaxis.zerolinecolor": "white", "scene.yaxis.backgroundcolor": "#E5ECF6", "scene.yaxis.gridcolor": "white", "scene.yaxis.linecolor": "white", "scene.yaxis.zerolinecolor": "white", "scene.zaxis.backgroundcolor": "#E5ECF6", "scene.zaxis.gridcolor": "white", "scene.zaxis.linecolor": "white", "scene.zaxis.zerolinecolor": "white", "shapedefaults.line.color": "#2a3f5f", "annotationdefaults.arrowcolor": "#2a3f5f", "geo.bgcolor": "white", "geo.landcolor": "#E5ECF6", "geo.subunitcolor": "white", "geo.lakecolor": "white", "mapbox.style": "light"}</span><span hidden="True" id="slate-template-settings">{"font.color": "#f2f5fa", "paper_bgcolor": "rgba(0,0,0,0)", "plot_bgcolor": "rgb(17,17,17)", "polar.bgcolor": "rgb(17,17,17)", "polar.angularaxis.gridcolor": "#506784", "polar.angularaxis.linecolor": "#506784", "polar.radialaxis.gridcolor": "#506784", "polar.radialaxis.linecolor": "#506784", "ternary.bgcolor": "rgb(17,17,17)", "ternary.aaxis.gridcolor": "#506784", "ternary.aaxis.linecolor": "#506784", "ternary.baxis.gridcolor": "#506784", "ternary.baxis.linecolor": "#506784", "ternary.caxis.gridcolor": "#506784", "ternary.caxis.linecolor": "#506784", "xaxis.gridcolor": "#283442", "xaxis.linecolor": "#506784", "xaxis.zerolinecolor": "#283442", "yaxis.gridcolor": "#283442", "yaxis.linecolor": "#506784", "yaxis.zerolinecolor": "#283442", "scene.xaxis.backgroundcolor": "rgb(17,17,17)", "scene.xaxis.gridcolor": "#506784", "scene.xaxis.linecolor": "#506784", "scene.xaxis.zerolinecolor": "#C8D4E3", "scene.yaxis.backgroundcolor": "rgb(17,17,17)", "scene.yaxis.gridcolor": "#506784", "scene.yaxis.linecolor": "#506784", "scene.yaxis.zerolinecolor": "#C8D4E3", "scene.zaxis.backgroundcolor": "rgb(17,17,17)", "scene.zaxis.gridcolor": "#506784", "scene.zaxis.linecolor": "#506784", "scene.zaxis.zerolinecolor": "#C8D4E3", "shapedefaults.line.color": "#f2f5fa", "annotationdefaults.arrowcolor": "#f2f5fa", "geo.bgcolor": "rgb(17,17,17)", "geo.landcolor": "rgb(17,17,17)", "geo.subunitcolor": "#506784", "geo.lakecolor": "rgb(17,17,17)", "mapbox.style": "dark"}</span><script src="../assets/javascripts/mkdocs-plotly-plugin.js"></script></body>
+</html>

@@ -1,0 +1,24 @@
+model name,EL,FA,NLI,QA,RC
+openai/gpt-4,0.28,0.3975,0.8333,0.645,0.9233
+gemini-pro,0.197,0.2265,0.7233,0.515,0.9133
+mistral-large,0.3433,0.3772,0.4333,0,0.9297
+yanolja/EEVE-Korean-Instruct-10.8B-v1.0,0.14,0.3471,0.7533,0.505,0.9244
+openai/gpt-3.5-turbo,0.1,0.4406,0.44,0.26,0.8677
+mistralai/Mixtral-8x7B-Instruct-v0.1,0.04,0.2638,0.6667,0.32,0.8614
+nlpai-lab/KULLM3,0.03,0.4198,0.7467,0.505,0.9007
+mistral-medium,0.05,0.3199,0.37,0.045,0.8963
+anthropic.claude-v2:1,0.005,0.2488,0.4533,0.385,0.2639
+Edentns/DataVortexS-10.7B-dpo-v1.11,0.105,0.0766,0.6967,0.235,0.9063
+ONS-SOLAR-10.7B-v1.2,0.07,0.1161,0.6133,0.31,0.6779
+Raphael21/Raphael21-SOLAR-10.7B,0.08,0.0605,0.65,0.29,0.8107
+LDCC-SOLAR-10.7B,0,0.0817,0.52,0.315,0.602
+beomi/SOLAR-KOEN-10.8B,0,0.1142,0.4933,0.205,0.4641
+beomi/OPEN-SOLAR-KO-10.7B,0.035,0.3429,0.4233,0.09,0.3318
+KT-AI/midm-bitext-S-7B-inst-v1,0,0.2879,0.5933,0.325,0.574
+42dot/42dot_LLM-SFT-1.3B,0,0.189,0.29,0.08,-0.049
+nlpai-lab/kullm-polyglot-5.8b-v2,0,0.2952,0.26,0.025,0
+beomi/gemma-ko-7b,0,0.2345,0.19,0.05,0.0333
+nlpai-lab/kullm-polyglot-12.8b-v2,0,0.2105,0.2133,0.115,0
+EleutherAI/polyglot-ko-5.8b,0,0.0024,0.0367,0,0
+megastudyedu/M-SOLAR-10.7B-v1.4-dpo,0,0,0,0,0.0498
+EleutherAI/polyglot-ko-12.8b,0,0.0064,0,0,0.0883
